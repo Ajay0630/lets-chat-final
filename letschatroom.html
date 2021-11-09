@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Let's Chat!</title>
+  <script type="module" src="letschatroom.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  </head>
+  <style>
+    .navbar {
+      margin-bottom: 50px !important;
+      border-radius: 0 !important;
+    }
+     .jumbotron {
+      margin-bottom: 0 !important;
+    }
+  </style>
+</head>
+<body class="text-info bg-success">
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Let's Chat!</h1>      
+    <p>St. Fairy School</p>
+  </div>
+</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><button class="btn btn-danger btn-lg" id="logoutbtn" onclick="logout()">Logout&nbsp;&nbsp;<span class="glyphicon glyphicon-log-out"></span></button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <h4 id="nameoftheuser"></h4>
+  <p class="lead">Please type a room name to chat in below.</p>
+  <input class="form-control" id="roomname" placeholder="Room name">
+  <br>
+  <button class="btn btn-success" id="addroom" onclick="addtheroom()">Add Room</button>
+  <hr>
+  <br>
+  <p class="lead">If you need to join a room, a list of available rooms are named below.</p>
+  <div id="output"></div>
+</div><br><br>
+</body>
+</html>
